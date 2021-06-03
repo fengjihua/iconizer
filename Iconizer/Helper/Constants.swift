@@ -41,5 +41,7 @@ struct Constants {
         static let generateLaunchImageForIPhoneKey = "generateLaunchImageForIPhone"
         /// Generate a LaunchImage for the iPad.
         static let generateLaunchImageForIPadKey = "generateLaunchImageForIPad"
+        /// Generate a LaunchImage for the Android.
+        static let generateLaunchImageForAndroidKey = "generateLaunchImageForAndroid"
     }
 }

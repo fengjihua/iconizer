@@ -1,0 +1,56 @@
+[
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "ldpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "320x200"
+  },
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "mdpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "480x320"
+  },
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "hdpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "800x480"
+  },
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "xhdpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "1280x720"
+  },
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "xxhdpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "1600x960"
+  },
+  {
+      "extent" : "full-screen",
+      "idiom" : "android",
+      "subtype" : "xxxhdpi",
+      "orientation" : "landscape",
+      "minimum-system-version" : "",
+      "scale" : "1x",
+      "size": "1920x1280"
+  }
+]

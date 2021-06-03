@@ -60,6 +60,12 @@ class PreferenceManager {
         set(newValue) { userDefaults.set(newValue, forKey: Constants.SettingKeys.generateLaunchImageForIPadKey) }
     }
 
+    /// Generate launch image for Android?
+    var generateLaunchImageForAndroid: Int {
+        get { return userDefaults.integer(forKey: Constants.SettingKeys.generateLaunchImageForAndroidKey) }
+        set(newValue) { userDefaults.set(newValue, forKey: Constants.SettingKeys.generateLaunchImageForAndroidKey) }
+    }
+
     /// The selected export type, e.g. App Icon, Launch Image, Icon Set.
     var selectedExportType: Int {
         get { return userDefaults.integer(forKey: Constants.SettingKeys.selectedExportTypeKey) }
@@ -80,7 +86,8 @@ class PreferenceManager {
             Constants.SettingKeys.generateAppIconForAppleWatchKey: NSControl.StateValue.on,
             Constants.SettingKeys.generateAppIconForCarKey: NSControl.StateValue.on,
             Constants.SettingKeys.generateLaunchImageForIPhoneKey: NSControl.StateValue.on,
-            Constants.SettingKeys.generateLaunchImageForIPadKey: NSControl.StateValue.on
+            Constants.SettingKeys.generateLaunchImageForIPadKey: NSControl.StateValue.on,
+            Constants.SettingKeys.generateLaunchImageForAndroidKey: NSControl.StateValue.on
         ]
 
         self.userDefaults.register(defaults: defaults)

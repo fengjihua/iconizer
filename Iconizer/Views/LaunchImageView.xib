@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LaunchImageViewController" customModule="Iconizer" customModuleProvider="target">
             <connections>
+                <outlet property="android" destination="kFX-iF-Tj4" id="1ro-z6-Wlb"/>
                 <outlet property="aspectMode" destination="6vf-dS-Kjp" id="xD5-iy-Gfd"/>
                 <outlet property="ipad" destination="r2F-2H-h1Q" id="LBa-k5-nQG"/>
                 <outlet property="iphone" destination="Lf6-a9-1AF" id="Std-61-WPF"/>
@@ -27,29 +26,29 @@
                 <box autoresizesSubviews="NO" borderType="line" title="Platforms" translatesAutoresizingMaskIntoConstraints="NO" id="nsQ-t7-zGv">
                     <rect key="frame" x="17" y="16" width="406" height="54"/>
                     <view key="contentView" id="lCA-EW-OD4">
-                        <rect key="frame" x="1" y="1" width="404" height="38"/>
+                        <rect key="frame" x="3" y="3" width="400" height="36"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-a9-1AF">
-                                <rect key="frame" x="16" y="12" width="64" height="18"/>
+                                <rect key="frame" x="14" y="10" width="64" height="18"/>
                                 <buttonCell key="cell" type="check" title="iPhone" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GRz-3e-Ok5">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="r2F-2H-h1Q">
-                                <rect key="frame" x="125" y="12" width="49" height="18"/>
+                                <rect key="frame" x="94" y="10" width="49" height="18"/>
                                 <buttonCell key="cell" type="check" title="iPad" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EP6-fE-bb6">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vf-dS-Kjp">
-                                <rect key="frame" x="235" y="7" width="152" height="26"/>
+                                <rect key="frame" x="235" y="5" width="152" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="Aspect Fill" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Tqh-sC-T1b" id="cTx-EH-Cs7">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
+                                    <font key="font" metaFont="system"/>
                                     <menu key="menu" id="MxQ-nh-p0x">
                                         <items>
                                             <menuItem title="Aspect Fill" state="on" identifier="fill" id="Tqh-sC-T1b">
@@ -62,14 +61,25 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kFX-iF-Tj4">
+                                <rect key="frame" x="159" y="9" width="70" height="18"/>
+                                <buttonCell key="cell" type="check" title="Android" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uux-Wt-5F8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="kFX-iF-Tj4" firstAttribute="leading" secondItem="r2F-2H-h1Q" secondAttribute="trailing" constant="20" id="VlV-IG-Qj2"/>
+                            <constraint firstItem="kFX-iF-Tj4" firstAttribute="baseline" secondItem="Lf6-a9-1AF" secondAttribute="baseline" constant="1" id="klq-Da-XGH"/>
+                        </constraints>
                     </view>
                     <constraints>
                         <constraint firstItem="r2F-2H-h1Q" firstAttribute="baseline" secondItem="Lf6-a9-1AF" secondAttribute="baseline" id="6KS-OZ-qV7"/>
                         <constraint firstAttribute="bottom" secondItem="Lf6-a9-1AF" secondAttribute="bottom" constant="11" id="S0d-2r-IWb"/>
                         <constraint firstItem="Lf6-a9-1AF" firstAttribute="leading" secondItem="nsQ-t7-zGv" secondAttribute="leading" constant="16" id="cXc-Ko-pJT"/>
                         <constraint firstAttribute="height" constant="50" id="dke-uY-NVG"/>
-                        <constraint firstItem="r2F-2H-h1Q" firstAttribute="leading" secondItem="Lf6-a9-1AF" secondAttribute="trailing" constant="49" id="iGC-do-EIV"/>
+                        <constraint firstItem="r2F-2H-h1Q" firstAttribute="leading" secondItem="Lf6-a9-1AF" secondAttribute="trailing" constant="20" id="iGC-do-EIV"/>
                         <constraint firstItem="Lf6-a9-1AF" firstAttribute="top" secondItem="nsQ-t7-zGv" secondAttribute="top" constant="25" id="txh-jH-U9C"/>
                     </constraints>
                 </box>
@@ -94,7 +104,7 @@
                     <rect key="frame" x="232" y="208" width="188" height="5"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-qi-0zT">
-                    <rect key="frame" x="301" y="185" width="50" height="17"/>
+                    <rect key="frame" x="301" y="186" width="50" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Portrait" id="gX1-ih-rqw">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -102,7 +112,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NE7-vi-dMn">
-                    <rect key="frame" x="80" y="185" width="71" height="17"/>
+                    <rect key="frame" x="80" y="186" width="71" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Landscape" id="DzG-Tm-Z8O">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

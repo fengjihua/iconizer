@@ -22,6 +22,9 @@ class LaunchImageViewController: NSViewController, IconizerViewControllerProtoco
 
     /// Checkbox to create a Launch Image for iPad.
     @IBOutlet weak var ipad: NSButton!
+    
+    /// Checkbox to create a Launch Image for Android.
+    @IBOutlet weak var android: NSButton!
 
     /// Select the fill mode for the launch image.
     @IBOutlet weak var aspectMode: NSPopUpButton!
@@ -34,6 +37,9 @@ class LaunchImageViewController: NSViewController, IconizerViewControllerProtoco
         }
         if ipad.state == NSControl.StateValue.on {
             platforms.append(Platform.iPad)
+        }
+        if android.state == NSControl.StateValue.on {
+            platforms.append(Platform.Android)
         }
         return platforms
     }
@@ -52,9 +58,11 @@ class LaunchImageViewController: NSViewController, IconizerViewControllerProtoco
         super.viewDidLoad()
         iphone.state = .init(rawValue: prefManager.generateLaunchImageForIPhone)
         ipad.state = .init(rawValue: prefManager.generateLaunchImageForIPad)
+        android.state = .init(rawValue: prefManager.generateLaunchImageForAndroid)
     }
 
     override func viewWillDisappear() {
+        prefManager.generateLaunchImageForAndroid = android.state.rawValue
         prefManager.generateLaunchImageForIPad = ipad.state.rawValue
         prefManager.generateLaunchImageForIPhone = iphone.state.rawValue
     }
